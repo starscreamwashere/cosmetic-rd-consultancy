@@ -26,7 +26,7 @@ export default function ServicesImageGrid() {
 
   const serviceImages: ServiceImage[] = [
     {
-      src: "/formDev.png",
+      src: "/formDev2.png",
       alt: "Advanced laboratory equipment for cosmetic formulation research and development",
       title: "Formulation Development",
       description: "State-of-the-art facilities for precision formulation",

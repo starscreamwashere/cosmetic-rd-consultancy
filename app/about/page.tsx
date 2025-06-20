@@ -1,34 +1,10 @@
-"use client"
-
-import {
-  Award,
-  Users,
-  Lightbulb,
-  Target,
-} from "lucide-react"
-import { useEffect, useState } from "react"
-import { m } from "framer-motion"
+import { Award, Users, Lightbulb, Target } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Navigation from "@/components/navigation"
 import AdvisorsSection from "@/components/AdvisorsSection"
 import Footer from "@/components/footer"
 
 export default function AboutPage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % 3)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const backgroundImages = [
-    "/about1.png",
-    "/about2.png",
-    "/about3 (1).png"
-  ]
-
   const values = [
     {
       icon: Lightbulb,
@@ -75,33 +51,13 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden min-h-[500px]">
-        <div className="absolute inset-0 z-0">
-          {backgroundImages.map((src, index) => (
-            <m.img
-  key={index}
-  src={src}
-  alt={`bg-${index}`}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
-  transition={{ duration: 1 }}
-  className="absolute inset-0 w-full h-full object-cover"
-  style={{
-    zIndex: 0,
-    pointerEvents: "none",
-    position: "absolute",
-  }}
-/>
-          ))}
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4">
+      <section className="py-20 lg:py-32">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-              About <span className="text-white">Us</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold text-charcoal mb-6 tracking-tight">
+              About <span className="text-sage">Us</span>
             </h1>
-            <p className="text-xl text-white/80 font-semibold leading-relaxed">
+            <p className="text-xl text-charcoal/70 font-semibold leading-relaxed">
               Innovation is our identity. Excellence is our legacy.
             </p>
           </div>
@@ -109,27 +65,21 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-white/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-lg text-charcoal/70 font-semibold mb-6 leading-relaxed">
-                  Innovation isn’t just what we do — it’s who we are. Our
-                  globally acclaimed formulas embody the perfect harmony of
-                  scientific precision and creative formulation, delivering
-                  outstanding results time and again!
-                </p>
-                <p className="text-lg text-charcoal/70 font-semibold leading-relaxed">
-                  Our commitment extends beyond formulation to encompass sustainability, safety, and social
-                  responsibility, ensuring that every product we develop contributes positively to both individual
-                  well-being and environmental health.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="py-20 bg-sage">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      <p className="text-lg text-white font-semibold mb-6 leading-relaxed">
+        Innovation isn’t just what we do — it’s who we are. Our globally acclaimed formulas embody the perfect harmony of
+        scientific precision and creative formulation, delivering outstanding results time and again!
+      </p>
+      <p className="text-lg text-white font-semibold leading-relaxed">
+        Our commitment extends beyond formulation to encompass sustainability, safety, and social responsibility, ensuring
+        that every product we develop contributes positively to both individual well-being and environmental health.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Values Section */}
       <section className="py-20">
@@ -166,10 +116,15 @@ export default function AboutPage() {
 
       {/* Advisors Section */}
       <div className="max-w-6xl mx-auto px-4">
-        <AdvisorsSection />
-      </div>
+  <AdvisorsSection />
+</div>
+
+            
+
+      {/* Scientific Approach Section */}
+      
 
       <Footer />
     </div>
   )
-}
+}   

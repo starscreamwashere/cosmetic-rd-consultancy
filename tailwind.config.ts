@@ -59,6 +59,7 @@ const config: Config = {
         sage: "#4B7260",
         charcoal: "#2E2E2E",
         gold: "#C4A484",
+        olive: "#708238",
       },
       borderRadius: {
         lg: "var(--radius)",
