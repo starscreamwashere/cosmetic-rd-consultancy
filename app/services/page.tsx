@@ -78,8 +78,8 @@ export default function ServicesPage() {
   ]
 
   const process = [
-    { title: "Define", icon: FileText, color: "bg-sage" },
     { title: "Discover", icon: Search, color: "bg-blue-500" },
+    { title: "Define", icon: FileText, color: "bg-sage" },
     { title: "Design", icon: PenTool, color: "bg-violet-500" },
     { title: "Develop", icon: Wrench, color: "bg-teal-500" },
     { title: "Deploy", icon: Rocket, color: "bg-orange-400" },

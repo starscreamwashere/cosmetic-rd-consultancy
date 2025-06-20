@@ -32,13 +32,14 @@ export default function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
          <Link href="/" className="flex items-center space-x-3">
-  <div className="h-10 w-auto">
-    <img
-      src="/GTlogo.png"
-      alt="The Green Tint Logo"
-      className="h-full object-contain"
-    />
-  </div>
+  <div className="h-20 w-auto md:h-24">
+  <img
+    src="/GTlogo.png"
+    alt="The Green Tint Logo"
+    className="h-full object-contain"
+  />
+</div>
+
 </Link>
 
 

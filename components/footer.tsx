@@ -18,14 +18,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-sage rounded-full flex items-center justify-center">
-                <Beaker className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-light">
-                The Green Tint<span className="text-sage font-normal"></span>
-              </span>
-            </Link>
+            <Link href="/" className="flex items-center space-x-3 mb-6">
+  <div className="h-21 md:h-24 w-auto">
+    <img
+      src="/GTlogo.png" // change this to your actual logo file path if different
+      alt="The Green Tint Logo"
+      className="h-full object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"
+    />
+  </div>
+</Link>
             <p className="text-white/70 leading-relaxed mb-6">
               Leading cosmetic R&D consultancy specializing in innovative formulations, sustainable ingredients, and
               cutting-edge product development.
