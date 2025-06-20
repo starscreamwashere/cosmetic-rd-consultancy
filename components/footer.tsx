@@ -19,13 +19,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-3 mb-6">
-  <div className="h-21 md:h-24 w-auto">
-    <img
-      src="/GTlogo.png" // change this to your actual logo file path if different
-      alt="The Green Tint Logo"
-      className="h-full object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]"
-    />
-  </div>
+  <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center">
+  <img
+    src="/GTlogo.png"
+    alt="The Green Tint Logo"
+    className="h-24 w-24 scale-125 object-contain"
+  />
+</div>
 </Link>
             <p className="text-white/70 leading-relaxed mb-6">
               Leading cosmetic R&D consultancy specializing in innovative formulations, sustainable ingredients, and
